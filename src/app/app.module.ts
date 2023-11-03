@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { LayoutModule } from '@treinamento-ergon/layout';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -12,6 +13,7 @@ import { LayoutModule } from '@treinamento-ergon/layout';
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     LayoutModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
