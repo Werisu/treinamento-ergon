@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@treinamento-ergon/course-data-access": [
+        "modules/data-access/course/src/index.ts"
+      ],
       "@treinamento-ergon/layout": ["modules/feature/layout/src/index.ts"]
     }
   },
