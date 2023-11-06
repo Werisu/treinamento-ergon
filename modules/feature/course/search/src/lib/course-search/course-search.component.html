@@ -1,1 +1,18 @@
-<p>course-search works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Buscar cursos</mat-label>
+    <input
+      type="text"
+      placeholder="Buscar cursos"
+      aria-label="Digite o curso que você quer encontrar"
+      matInput
+      [formControl]="control"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let course of courses" [value]="course">
+        {{ course.titulo }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

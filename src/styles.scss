@@ -8,10 +8,43 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+$ergon-primary: (
+  50: #4527a0,
+  100: #512da8,
+  200: #5e35b1,
+  300: #673ab7,
+  400: #7e57c2,
+  500: #4d228a,
+  600: #9575cd,
+  700: #b39ddb,
+  800: #d1c4e9,
+  900: #ede7f6,
+  A100: #b388ff,
+  A200: #7c4dff,
+  A400: #651fff,
+  A700: #6200ea,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: white,
+    A400: white,
+    A700: white,
+  ),
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$treinamento-ergon-primary: mat.define-palette(mat.$indigo-palette);
+$treinamento-ergon-primary: mat.define-palette($ergon-primary);
 $treinamento-ergon-accent: mat.define-palette(
   mat.$pink-palette,
   A200,
