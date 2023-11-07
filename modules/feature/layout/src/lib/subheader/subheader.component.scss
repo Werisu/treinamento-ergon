@@ -1,0 +1,36 @@
+.subheader {
+  display: flex;
+  height: 224px;
+  padding: 48px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: linear-gradient(
+      0deg,
+      rgba(33, 37, 41, 0.5) 0%,
+      rgba(33, 37, 41, 0.5) 100%
+    ),
+    url('../../../../../../src/assets/image/banner.jpg') lightgray 50% / cover
+      no-repeat;
+  .container-subheader {
+    display: flex;
+    width: 826px;
+    padding: 0px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    .subtitle {
+      color: var(--White, #fff);
+      text-align: center;
+      /* Poppins 32 */
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px; /* 100% */
+    }
+  }
+}
