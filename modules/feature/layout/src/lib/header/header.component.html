@@ -1,7 +1,6 @@
 <header class="header">
-  <mat-toolbar color="primary">
-    <span>{{ title }}</span>
-    <!-- <span class="example-spacer"></span> -->
+  <mat-toolbar>
+    <img [src]="src" alt="Logo Ergon" />
     <ng-content></ng-content>
     <ng-content select="[right]"></ng-content>
   </mat-toolbar>

@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-const mockTitle = 'Any Title';
+const mockImage = 'caminho/para/sua/imagem.jpg';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -18,7 +18,7 @@ describe('HeaderComponent', () => {
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
-    component.title = mockTitle;
+    component.src = mockImage;
     fixture.detectChanges();
   });
 
@@ -26,13 +26,14 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain title', () => {
+  it('should contain image', () => {
     const header: HTMLHeadingElement =
       fixture.nativeElement.querySelector('header');
-    expect(header.textContent).toBe(mockTitle);
+    const imgElement: HTMLImageElement =
+      fixture.debugElement.nativeElement.querySelector('img');
+    expect(header.querySelector('img')).toBeTruthy();
 
-    component.title = 'Other title';
-    fixture.detectChanges();
-    expect(header.textContent).toBe('Other title');
+    expect(imgElement.getAttribute('src')).toBe(mockImage); // Verifique se o atributo src da imagem corresponde ao valor definido em component.src.
+    expect(imgElement.getAttribute('alt')).toBe('Logo Ergon'); // Verifique se o atributo alt da imagem está definido corretamente.
   });
 });
