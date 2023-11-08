@@ -18,4 +18,12 @@ describe('SubheaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain subtitle', () => {
+    const element: HTMLElement =
+      fixture.nativeElement.querySelector('.subheader');
+    expect(element.textContent).toBe(
+      'Juntos Somos a Transformação da Educação!'
+    );
+  });
 });
