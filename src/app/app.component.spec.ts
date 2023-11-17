@@ -4,6 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '@treinamento-ergon/layout';
 import { CourseSearchComponent } from '@treinamento-ergon/course-search';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -15,6 +17,8 @@ describe('AppComponent', () => {
         LayoutModule,
         CourseSearchComponent,
         HttpClientTestingModule,
+        MatIconModule,
+        MatButtonModule,
       ],
       declarations: [AppComponent],
     }).compileComponents();

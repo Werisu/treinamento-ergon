@@ -17,3 +17,11 @@
 ::ng-deep treinamento-ergon-header .mat-mdc-form-field-bottom-align::before {
   display: none !important;
 }
+@media screen and (max-width: 768px) {
+  .toolbar {
+    padding: 32px 32px;
+    &__image {
+      width: 50%;
+    }
+  }
+}
