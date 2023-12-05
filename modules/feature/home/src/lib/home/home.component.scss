@@ -1,0 +1,71 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 132px;
+  background-color: #fff;
+}
+
+.course__card__container {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  .course__progressbar {
+    display: flex;
+    padding-bottom: 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .course__card {
+    max-width: 400px;
+    .course__card__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      align-self: stretch;
+      .course__rating {
+        display: flex;
+        gap: 4px;
+        align-items: end;
+        .mat-icon {
+          color: #ffc107;
+        }
+      }
+    }
+    .course__subtitle {
+      display: flex;
+      padding-top: 4px;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+      .course__subtitle__icon {
+        color: Brow-2;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 100% */
+      }
+      .course__subtitle__text {
+        color: Brow-2;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px; /* 100% */
+      }
+    }
+
+    .course__title {
+      color: Brow 1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 16px; /* 100% */
+    }
+  }
+}
+
+::ng-deep treinamento-ergon-home .mdc-linear-progress__bar-inner {
+  border-color: var(--Success, #198754);
+}

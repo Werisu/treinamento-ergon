@@ -1,13 +1,27 @@
-.header mat-toolbar {
+.toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 32px 132px;
   background-color: #fff;
-  .logo {
-    color: #fff;
+  &__logo {
+    color: #ccc;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__logo {
+    text-decoration: none;
   }
 }
 ::ng-deep treinamento-ergon-header .mat-mdc-form-field-bottom-align::before {
   display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .toolbar {
+    padding: 32px 32px;
+    &__image {
+      width: 50%;
+    }
+  }
 }
