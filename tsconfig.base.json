@@ -21,6 +21,7 @@
       "@treinamento-ergon/course-search": [
         "modules/feature/course/search/src/index.ts"
       ],
+      "@treinamento-ergon/course-ui": ["modules/ui/course/src/index.ts"],
       "@treinamento-ergon/home": ["modules/feature/home/src/index.ts"],
       "@treinamento-ergon/layout": ["modules/feature/layout/src/index.ts"]
     }
