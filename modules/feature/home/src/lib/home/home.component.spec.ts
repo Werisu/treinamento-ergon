@@ -1,13 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {
   RecommendedCoursesService,
   mockCourses,
 } from '@treinamento-ergon/course-data-access';
 import { of } from 'rxjs';
+import { CourseCardComponent } from '@treinamento-ergon/course-ui';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -15,7 +13,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatCardModule, MatIconModule, MatProgressBarModule],
+      imports: [CourseCardComponent],
       declarations: [HomeComponent],
       providers: [
         {
@@ -37,8 +35,9 @@ describe('HomeComponent', () => {
   });
 
   it('should render recommended cards correctly', () => {
-    const cards: HTMLElement[] =
-      fixture.nativeElement.querySelectorAll('mat-card');
+    const cards: HTMLElement[] = fixture.nativeElement.querySelectorAll(
+      'treinamento-ergon-course-card'
+    );
     expect(cards.length).toBe(mockCourses.length);
   });
 });
