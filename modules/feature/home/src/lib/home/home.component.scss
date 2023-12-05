@@ -6,17 +6,18 @@
   background-color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+  .home {
+    padding: 16px;
+  }
+}
+
 .course__card__container {
   display: flex;
-  gap: 4px;
   flex-wrap: wrap;
-  .course__progressbar {
-    display: flex;
-    padding-bottom: 8px;
-    align-items: center;
-    gap: 8px;
-    align-self: stretch;
-  }
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
 }
 
 ::ng-deep treinamento-ergon-home .mdc-linear-progress__bar-inner {

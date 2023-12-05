@@ -26,7 +26,7 @@ describe('RecommendedCoursesService', () => {
 
   it('should return recommended courses correctly', () => {
     // ARRANGE
-    const url = `${service.apiUrl}/treinamento?page=1&limit=6`;
+    const url = `${service.apiUrl}/treinamento?page=1&limit=5`;
     let result: Course[] = [];
 
     // ACT

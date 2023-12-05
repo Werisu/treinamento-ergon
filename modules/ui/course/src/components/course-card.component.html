@@ -3,7 +3,9 @@
   <div class="course__progressbar">
     <mat-progress-bar
       mode="determinate"
-      value="40"
+      [value]="
+        ((course.quant_assistidas / course.quant_aulas) * 100).toFixed(2)
+      "
       class="course__progressbar__value"
     ></mat-progress-bar>
   </div>

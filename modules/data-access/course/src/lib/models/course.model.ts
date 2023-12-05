@@ -6,6 +6,9 @@ export type Course = {
   nota: number;
   quant_avaliacoes: number;
   id: string;
+  inscrito: boolean;
+  quant_aulas: number;
+  quant_assistidas: number;
 };
 
 // type CourseWithoutId = Omit<Course, 'id'>;

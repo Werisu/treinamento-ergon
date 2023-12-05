@@ -1,5 +1,12 @@
 .course__card {
-  max-width: 400px;
+  max-width: 308.5px; // Tamanho máximo de 100% do contêiner pai
+  .course__progressbar {
+    display: flex;
+    padding-bottom: 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
   .course__card__content {
     display: flex;
     flex-direction: column;
@@ -43,5 +50,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 16px; /* 100% */
+  }
+}
+@media screen and (max-width: 600px) {
+  .course__card {
+    max-width: 100%;
   }
 }

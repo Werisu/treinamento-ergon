@@ -14,7 +14,7 @@ export class RecommendedCoursesService {
     return this.http.get<Course[]>(`${this.apiUrl}/treinamento`, {
       params: {
         page: 1,
-        limit: 6,
+        limit: 5,
       },
     });
   }
