@@ -5,7 +5,10 @@ import {
   mockCourses,
 } from '@treinamento-ergon/course-data-access';
 import { of } from 'rxjs';
-import { CourseCardComponent } from '@treinamento-ergon/course-ui';
+import {
+  CourseBigCardComponent,
+  CourseCardComponent,
+} from '@treinamento-ergon/course-ui';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -13,7 +16,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CourseCardComponent],
+      imports: [CourseCardComponent, CourseBigCardComponent],
       declarations: [HomeComponent],
       providers: [
         {
@@ -38,6 +41,13 @@ describe('HomeComponent', () => {
     const cards: HTMLElement[] = fixture.nativeElement.querySelectorAll(
       'treinamento-ergon-course-card'
     );
-    expect(cards.length).toBe(mockCourses.length);
+    expect(cards.length).toBe(mockCourses.length * 2);
+  });
+
+  it('should render big card correctly', () => {
+    const cards: HTMLElement[] = fixture.nativeElement.querySelectorAll(
+      'treinamento-ergon-course-big-card'
+    );
+    expect(cards.length).toBe(1);
   });
 });

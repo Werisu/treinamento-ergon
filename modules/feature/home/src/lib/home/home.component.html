@@ -1,7 +1,25 @@
 <!-- Vai ser refatorado em outro componente, mas por enquanto vai ficar assim -->
 <main class="home">
+  <section class="home__banner">
+    <treinamento-ergon-course-big-card></treinamento-ergon-course-big-card>
+  </section>
+
   <section>
     <h2>Cursos em destaque</h2>
+
+    <div class="course__card__container">
+      @for (course of courses$ | async; track course.id){
+      <treinamento-ergon-course-card
+        [course]="course"
+      ></treinamento-ergon-course-card>
+      } @empty {
+      <strong>Não temos cursos recomendados para você por enquanto</strong>
+      }
+    </div>
+  </section>
+
+  <section>
+    <h2>Escola</h2>
 
     <div class="course__card__container">
       @for (course of courses$ | async; track course.id){

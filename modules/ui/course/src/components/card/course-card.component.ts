@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { Course } from 'modules/data-access/course/src/lib/models/course.model';
+import { Course } from '@treinamento-ergon/course-data-access';
 
 @Component({
   selector: 'treinamento-ergon-course-card',

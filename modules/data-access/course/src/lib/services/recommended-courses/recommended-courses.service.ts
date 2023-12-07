@@ -10,11 +10,11 @@ export class RecommendedCoursesService {
   readonly apiUrl = 'https://65453b915a0b4b04436dd985.mockapi.io/api/v1';
   constructor(private http: HttpClient) {}
 
-  getCourses(): Observable<Course[]> {
+  getCourses(page: number = 1, limit: number = 5): Observable<Course[]> {
     return this.http.get<Course[]>(`${this.apiUrl}/treinamento`, {
       params: {
-        page: 1,
-        limit: 5,
+        page,
+        limit,
       },
     });
   }

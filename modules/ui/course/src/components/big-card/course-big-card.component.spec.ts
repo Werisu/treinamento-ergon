@@ -18,4 +18,14 @@ describe('CourseBigCardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render big card correctly', () => {
+    const cards: HTMLElement[] = fixture.nativeElement.querySelectorAll(
+      '.home__banner__text'
+    );
+    expect(cards.length).toBe(1);
+    expect(cards[0].textContent).toContain(
+      'Excelência em Aprendizado com o Portal de Treinamento Ergon Sistema'
+    );
+  });
 });
