@@ -11,4 +11,11 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('@treinamento-ergon/home').then((m) => m.HomeModule),
   },
+  {
+    path: 'course',
+    loadChildren: () =>
+      import('@treinamento-ergon/course-detail').then(
+        (m) => m.courseDetailRoutes
+      ),
+  },
 ];

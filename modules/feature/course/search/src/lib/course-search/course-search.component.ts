@@ -13,6 +13,7 @@ import {
   switchMap,
 } from 'rxjs';
 import { Course } from 'modules/data-access/course/src/lib/models/course.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'treinamento-ergon-course-search',
@@ -23,6 +24,7 @@ import { Course } from 'modules/data-access/course/src/lib/models/course.model';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   templateUrl: './course-search.component.html',
   styleUrls: ['./course-search.component.scss'],

@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, map } from 'rxjs';
+
+function getParamId(): Observable<string> {
+  return inject(ActivatedRoute).params.pipe(map((params) => params['id']));
+}
 
 @Component({
   selector: 'treinamento-ergon-course-detail',
@@ -8,4 +14,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './course-detail.component.html',
   styleUrl: './course-detail.component.scss',
 })
-export class CourseDetailComponent {}
+export class CourseDetailComponent {
+  public courseId$ = getParamId();
+}
