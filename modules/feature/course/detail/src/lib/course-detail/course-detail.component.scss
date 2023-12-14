@@ -1,27 +1,4 @@
-// Defina as larguras máximas responsivas
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1639px,
-);
-
-$container-padding-x: 15px;
-
-// Crie a classe course-container
-.course {
-  width: 100%;
-  padding-right: $container-padding-x;
-  padding-left: $container-padding-x;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: gray;
-
-  // Aplicar larguras máximas responsivas
-  @each $breakpoint, $container-max-width in $container-max-widths {
-    @media (min-width: $container-max-width) {
-      max-width: $container-max-width;
-    }
-  }
+// toolbar
+.example-spacer {
+  flex: 1 1 auto;
 }
