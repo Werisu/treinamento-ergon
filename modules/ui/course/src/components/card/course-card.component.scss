@@ -1,5 +1,6 @@
 .course__card {
   max-width: 308.5px; // Tamanho máximo de 100% do contêiner pai
+  cursor: pointer;
   .course__progressbar {
     display: flex;
     padding-bottom: 8px;

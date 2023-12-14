@@ -5,6 +5,7 @@ import {
   mockCourses,
 } from '@treinamento-ergon/course-data-access';
 import { of } from 'rxjs';
+import { RouterTestingModule } from '@angular/router/testing';
 import {
   CourseBigCardComponent,
   CourseCardComponent,
@@ -16,7 +17,11 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CourseCardComponent, CourseBigCardComponent],
+      imports: [
+        CourseCardComponent,
+        CourseBigCardComponent,
+        RouterTestingModule,
+      ],
       declarations: [HomeComponent],
       providers: [
         {

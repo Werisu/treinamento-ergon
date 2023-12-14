@@ -1,4 +1,4 @@
-<mat-card class="course__card">
+<mat-card class="course__card" [routerLink]="['/course', course.id]">
   <img mat-card-image [src]="course.imagem" [alt]="course.titulo" />
   <div class="course__progressbar">
     <mat-progress-bar

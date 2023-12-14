@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { mockCourses } from '@treinamento-ergon/course-data-access';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CourseCardComponent', () => {
   let component: CourseCardComponent;
@@ -16,6 +17,7 @@ describe('CourseCardComponent', () => {
         MatCardModule,
         MatIconModule,
         MatProgressBarModule,
+        RouterTestingModule,
       ],
     }).compileComponents();
 
