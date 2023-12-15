@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { ProgressComponent } from './progress/progress.component';
+import { LessonsComponent } from './lessons/lessons.component';
 
 @Component({
   selector: 'treinamento-ergon-course-detail',
@@ -15,12 +17,13 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    ProgressComponent,
+    LessonsComponent,
   ],
   templateUrl: './course-detail.component.html',
   styleUrl: './course-detail.component.scss',
 })
 export class CourseDetailComponent {
   public courseId$ = getParamId();
-  public showFiller = false;
   public titulo = 'Diário Escolar - Treinamento completo';
 }

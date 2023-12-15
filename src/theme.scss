@@ -123,3 +123,10 @@ $treinamento-ergon-dark-theme: mat.define-dark-theme(
 .unicorn-dark-theme {
   @include mat.all-component-themes($treinamento-ergon-dark-theme);
 }
+
+// variáveis
+:root {
+  --primary-color: #651fff;
+  --secondary-color: #d1c4e9;
+  --action-color: #ab58b9;
+}

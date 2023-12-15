@@ -17,5 +17,8 @@ export const appRoutes: Route[] = [
       import('@treinamento-ergon/course-detail').then(
         (m) => m.courseDetailRoutes
       ),
+    data: {
+      title: 'Cursos',
+    },
   },
 ];

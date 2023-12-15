@@ -1,0 +1,41 @@
+$Brow-1: #212529;
+.course__drawer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  mat-card {
+    background-color: white;
+    color: #000;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 0.5px solid $Brow-1;
+  }
+  .mat-card-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    .left {
+      position: relative;
+      .left__spinner {
+        width: 61px !important;
+        height: 61px !important;
+      }
+      span {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 14px; /* 100% */
+      }
+    }
+  }
+}
