@@ -6,6 +6,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  CourseSearchService,
+  mockCourses,
+} from '@treinamento-ergon/course-data-access';
+import { of } from 'rxjs';
 
 describe('CourseDetailComponent', () => {
   let component: CourseDetailComponent;
@@ -21,6 +26,12 @@ describe('CourseDetailComponent', () => {
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,
+      ],
+      providers: [
+        {
+          provide: CourseSearchService,
+          useValue: { getById: () => of(mockCourses[0]) },
+        },
       ],
     }).compileComponents();
 

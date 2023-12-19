@@ -9,7 +9,9 @@
         [opened]="true"
       >
         <div class="course__container__sidenav__content">
-          <treinamento-ergon-progress></treinamento-ergon-progress>
+          <treinamento-ergon-progress
+            [course]="course$ | async"
+          ></treinamento-ergon-progress>
           <treinamento-ergon-lessons></treinamento-ergon-lessons>
         </div>
       </mat-drawer>

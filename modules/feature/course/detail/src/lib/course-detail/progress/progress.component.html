@@ -11,9 +11,17 @@
             [value]="value"
           >
           </mat-progress-spinner>
-          <span>{{ value }}%</span>
+          <span
+            >{{
+              ((course?.quant_assistidas ?? 0) / (course?.quant_aulas ?? 0)) *
+                100 | number : '1.0-0'
+            }}%</span
+          >
         </div>
-        <div class="right">16 de 20 itens concluídos</div>
+        <div class="right">
+          {{ course?.quant_assistidas }} de {{ course?.quant_aulas }} itens
+          concluídos
+        </div>
       </div>
     </mat-card-content>
   </mat-card>
