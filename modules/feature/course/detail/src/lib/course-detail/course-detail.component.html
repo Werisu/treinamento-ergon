@@ -1,0 +1,65 @@
+<div class="course" class="unicorn-dark-theme">
+  <div class="course__container">
+    <mat-drawer-container class="course__container__drawer" autosize>
+      <mat-drawer
+        #drawer
+        class="course__container__sidenav"
+        mode="side"
+        position="end"
+        [opened]="true"
+      >
+        <div class="course__container__sidenav__content">
+          <treinamento-ergon-progress
+            [course]="course$ | async"
+          ></treinamento-ergon-progress>
+          <treinamento-ergon-lessons></treinamento-ergon-lessons>
+        </div>
+      </mat-drawer>
+
+      <div class="example-sidenav-content">
+        <mat-toolbar color="primary">
+          <span>{{ titulo }}</span>
+          <span class="example-spacer"></span>
+          <button
+            mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon"
+          >
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+          >
+            <img src="assets/image/LOGO-02 1.png" alt="Logo da ergon" />
+          </button>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+            (click)="drawer.toggle()"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </mat-toolbar>
+        <div class="course__content">
+          <span>Frequência</span>
+          <h3>
+            Aprenda a realizar a gestão de diários escolares com o acesso SEMED!
+          </h3>
+          <div class="course__content__video-aula">
+            <iframe
+              src="https://www.youtube.com/embed/uTyjf9HV-6o?si=swkahT19_nKfo5tx"
+              title="YouTube video"
+              allowfullscreen
+              height="500px"
+              width="100%"
+              style="border-radius: 8px; border: none"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>

@@ -17,4 +17,8 @@ export class CourseSearchService {
       },
     });
   }
+
+  getById(id: string): Observable<Course> {
+    return this.http.get<Course>(`${this.apiUrl}/treinamento/${id}`);
+  }
 }

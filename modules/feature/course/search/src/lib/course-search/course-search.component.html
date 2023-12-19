@@ -10,7 +10,11 @@
       [matAutocomplete]="auto"
     />
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      <mat-option *ngFor="let course of courses$ | async" [value]="course">
+      <mat-option
+        *ngFor="let course of courses$ | async"
+        [value]="course.titulo"
+        [routerLink]="['/course', course.id]"
+      >
         {{ course.titulo }}
       </mat-option>
     </mat-autocomplete>

@@ -1,0 +1,60 @@
+<nav class="lession">
+  <mat-accordion [multi]="true">
+    @for (item of typeItens; track item.id) {
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+      [expanded]="true"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{ item.name }} </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="lession__menu__nav">
+        <ul class="lession__menu__nav__list">
+          @for (aula of item.aulas; track aula.id) {
+          <li class="lession__menu__nav__item">
+            <a
+              role="link"
+              (click)="openVideo(aula)"
+              class="lession__menu__nav__item__link"
+              [ngClass]="{
+                'lession__menu__nav__item__link--active':
+                  lessonSelected === aula
+              }"
+            >
+              <mat-icon>play_circle_outline</mat-icon>
+              <span class="lession__menu__nav__item__link__number">{{
+                aula.id
+              }}</span>
+              <span class="lession__menu__nav__item__link__text">
+                <span class="task-menu-nav-item-title" title="Introdução">
+                  {{ aula.name }}
+                </span>
+                <span class="lession__menu__nav__item__link__text__infos">
+                  <span
+                    class="lession__menu__nav__item__link__text__videoDuration"
+                    title="Ir para o Vídeo"
+                    >{{ aula.min }}</span
+                  >
+                  <mat-radio-group
+                    aria-labelledby="example-radio-group-label"
+                    class="example-radio-group"
+                    color="accent"
+                  >
+                    <mat-radio-button
+                      class="example-radio-button"
+                      [value]="1"
+                      color="accent"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </span>
+              </span>
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+    </mat-expansion-panel>
+    } @empty { Nada encontrado }
+  </mat-accordion>
+</nav>

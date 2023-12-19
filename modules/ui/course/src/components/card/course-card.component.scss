@@ -1,0 +1,60 @@
+.course__card {
+  max-width: 308.5px; // Tamanho máximo de 100% do contêiner pai
+  cursor: pointer;
+  .course__progressbar {
+    display: flex;
+    padding-bottom: 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .course__card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    .course__rating {
+      display: flex;
+      gap: 4px;
+      align-items: flex-end;
+      .mat-icon {
+        color: #ffc107;
+      }
+    }
+  }
+  .course__subtitle {
+    display: flex;
+    padding-top: 4px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    .course__subtitle__icon {
+      color: Brow-2;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 100% */
+    }
+    .course__subtitle__text {
+      color: Brow-2;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px; /* 100% */
+    }
+  }
+
+  .course__title {
+    color: Brow 1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 100% */
+  }
+}
+@media screen and (max-width: 600px) {
+  .course__card {
+    max-width: 100%;
+  }
+}

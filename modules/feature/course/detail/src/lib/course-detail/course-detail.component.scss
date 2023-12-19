@@ -1,0 +1,48 @@
+// toolbar
+.example-spacer {
+  flex: 1 1 auto;
+}
+.course__container {
+  .course__container__drawer {
+    .course__container__sidenav {
+      background-color: white;
+      color: black;
+      padding: 25px;
+      color: #000;
+      display: flex;
+      width: 373px;
+      padding: 16px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+      .course__container__sidenav__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        treinamento-ergon-lessons {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .course__content {
+    height: 86.3vh;
+    display: flex;
+    padding: 32px 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    .course__content__video-aula {
+      text-align: center;
+      width: 50%;
+      border-radius: 8px;
+      background: #d9d9d9;
+      display: flex;
+    }
+  }
+}

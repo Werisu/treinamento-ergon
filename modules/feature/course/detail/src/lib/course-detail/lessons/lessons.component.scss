@@ -1,0 +1,67 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$my-palette: mat.define-palette(mat.$indigo-palette, 500);
+
+.lession {
+  mat-expansion-panel {
+    background-color: white;
+    * {
+      color: black;
+      padding: 0px;
+      margin: 0px;
+    }
+    .lession__menu__nav {
+      .lession__menu__nav__list {
+        list-style: none;
+      }
+      .lession__menu__nav__item {
+        .lession__menu__nav__item__link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16.2px 18px;
+          .lession__menu__nav__item__link__text {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            .lession__menu__nav__item__link__text__infos {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 0;
+              margin-left: 9px;
+              .lession__menu__nav__item__link__text__videoDuration {
+                display: inline-block;
+                font-size: 10px;
+                border-radius: 2px;
+                background-color: #1c1f22;
+                padding: 4.95px 9px;
+                color: #aeaeae;
+              }
+            }
+          }
+        }
+      }
+      .lession__menu__nav__item__link--active {
+        background-color: var(--action-color);
+        * {
+          color: white;
+        }
+      }
+      .lession__menu__nav__item:hover {
+        background-color: var(--secondary-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+::ng-deep treinamento-ergon-lessons .mat-expansion-panel-body {
+  padding: 0px;
+}
+::ng-deep treinamento-ergon-lessons .mdc-radio {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-right: 0px !important;
+}

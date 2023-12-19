@@ -1,0 +1,28 @@
+<mat-card class="course__card" [routerLink]="['/course', course.id]">
+  <img mat-card-image [src]="course.imagem" [alt]="course.titulo" />
+  <div class="course__progressbar">
+    <mat-progress-bar
+      mode="determinate"
+      [value]="
+        ((course.quant_assistidas / course.quant_aulas) * 100).toFixed(2)
+      "
+      class="course__progressbar__value"
+    ></mat-progress-bar>
+  </div>
+  <mat-card-content class="course__card__content">
+    <div class="course__rating">
+      <span>4.5</span>
+      <mat-icon>star</mat-icon>
+      <span>(74)</span>
+    </div>
+    <mat-card-title class="course__title">{{ course.titulo }}</mat-card-title>
+    <mat-card-subtitle>
+      <div class="course__subtitle">
+        <mat-icon class="course__subtitle__icon">schedule</mat-icon>
+        <span class="course__subtitle__text"
+          >{{ course.carga_horaria }} horas</span
+        >
+      </div>
+    </mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
