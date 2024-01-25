@@ -9,6 +9,7 @@ export type Course = {
   inscrito: boolean;
   quant_aulas: number;
   quant_assistidas: number;
+  vagas: number;
 };
 
 // type CourseWithoutId = Omit<Course, 'id'>;

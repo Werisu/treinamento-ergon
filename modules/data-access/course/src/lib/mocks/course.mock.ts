@@ -12,6 +12,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 71,
     quant_assistidas: 11,
     id: '1',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-04T22:51:54.013Z',
@@ -24,6 +25,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 59,
     quant_assistidas: 25,
     id: '2',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T08:49:53.082Z',
@@ -36,6 +38,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 92,
     quant_assistidas: 24,
     id: '3',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T03:00:26.697Z',
@@ -48,6 +51,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 32,
     quant_assistidas: 52,
     id: '4',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T16:30:58.591Z',
@@ -60,6 +64,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 36,
     quant_assistidas: 59,
     id: '5',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T19:35:29.339Z',
@@ -72,6 +77,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 75,
     quant_assistidas: 32,
     id: '6',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-04T22:13:04.239Z',
@@ -84,6 +90,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 64,
     quant_assistidas: 97,
     id: '7',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-04T20:53:08.207Z',
@@ -96,6 +103,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 94,
     quant_assistidas: 68,
     id: '8',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T13:25:22.170Z',
@@ -108,6 +116,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 78,
     quant_assistidas: 97,
     id: '9',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T01:55:25.422Z',
@@ -120,6 +129,7 @@ export const mockCourses: Course[] = [
     quant_aulas: 98,
     quant_assistidas: 66,
     id: '10',
+    vagas: 1,
   },
   {
     createdAt: '2023-12-05T09:18:29.789Z',
@@ -132,5 +142,6 @@ export const mockCourses: Course[] = [
     quant_aulas: 47,
     quant_assistidas: 29,
     id: '11',
+    vagas: 1,
   },
 ];
