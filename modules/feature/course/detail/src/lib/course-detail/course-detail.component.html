@@ -1,5 +1,5 @@
-<div class="course" class="unicorn-dark-theme">
-  <div class="course__container">
+<main class="course-detail" class="unicorn-dark-theme">
+  <section class="course-detail__section">
     <mat-drawer-container class="course__container__drawer" autosize>
       <mat-drawer
         #drawer
@@ -9,10 +9,20 @@
         [opened]="true"
       >
         <div class="course__container__sidenav__content">
-          <treinamento-ergon-progress
-            [course]="course$ | async"
-          ></treinamento-ergon-progress>
-          <treinamento-ergon-lessons></treinamento-ergon-lessons>
+          <ng-container *ngIf="course$ | async as course">
+            <span>{{ course.vagas | quantityDescription }}</span>
+            <button
+              *ngIf="!course.inscrito && course.vagas > 0"
+              mat-raised-button
+              color="accent"
+            >
+              Inscrever-se
+            </button>
+            <treinamento-ergon-progress
+              [course]="course"
+            ></treinamento-ergon-progress>
+            <treinamento-ergon-lessons></treinamento-ergon-lessons>
+          </ng-container>
         </div>
       </mat-drawer>
 
@@ -61,5 +71,5 @@
         </div>
       </div>
     </mat-drawer-container>
-  </div>
-</div>
+  </section>
+</main>

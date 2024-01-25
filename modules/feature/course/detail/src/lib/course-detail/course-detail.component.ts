@@ -9,6 +9,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { CourseSearchService } from '@treinamento-ergon/course-data-access';
 import { Observable, switchMap } from 'rxjs';
+import { QuantityDescriptionPipe } from '../pipes/quantity-description/quantity-description.pipe';
 
 @Component({
   selector: 'treinamento-ergon-course-detail',
@@ -21,6 +22,7 @@ import { Observable, switchMap } from 'rxjs';
     MatIconModule,
     ProgressComponent,
     LessonsComponent,
+    QuantityDescriptionPipe,
   ],
   templateUrl: './course-detail.component.html',
   styleUrl: './course-detail.component.scss',
